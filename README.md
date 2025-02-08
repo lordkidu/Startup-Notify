@@ -43,3 +43,5 @@ You can configure the duration, style, and type of the notification to suit your
 Announcing server events.
 Informing players of updates or changes.
 Triggering notifications based on custom actions like completing a task, achieving a milestone, or interacting with a key element.
+
+feel free to join the discord: https://discord.gg/WP44YxqXqH
