@@ -16,13 +16,13 @@ Use the provided exports to trigger notifications from other scripts or directly
 
 **Client Side Notification: Trigger notifications from any other script using this export function:**
 
-exports['Startup-Notify']:exportStartupNotify('This is a success message!', 'success', 5000)
+exports['startup_notify']:exportStartupNotify('Message', 'type', time)
 
 ---
 
 **Server Side Notification: Notify a specific player or all players with:**
 
-exports['Startup-Notify']:exportStartupNotifyServer(playerId, 'Server announcement!', 'info', 5000)
+exports['startup_notify']:exportStartupNotifyServer(playerId, 'Message', 'type', time)
 
 
 ### **Supported Notification Types:**
