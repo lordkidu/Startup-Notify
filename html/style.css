@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#notifications {
+    position: fixed;
+    top: 50px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 1000;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    border-radius: 12px;
+    font-size: 14px; 
+    font-weight: 500;
+    color: white;
+    min-width: 280px;
+    max-width: 350px;
+    background: rgba(40, 40, 40, 0.85); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transform: translateX(120%);
+    animation: slideIn 0.6s ease-out forwards, fadeOut 0.6s ease-in 4.5s forwards;
+}
+
+
+.icon-container {
+    font-size: 20px;
+    padding: 6px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.2); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    opacity: 0;
+    animation: iconAppear 0.5s ease-out forwards, iconBounce 1.2s ease-in-out infinite alternate;
+}
+
+
+@keyframes iconAppear {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+
+@keyframes iconBounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+
+.notification span {
+    font-size: 14px; 
+    font-weight: 500;
+    color: #f1f1f1;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+.success {
+    border-left: 6px solid #2ecc71;
+}
+.success .icon-container { background: #2ecc71; box-shadow: 0 0 15px #2ecc71; }
+
+.error {
+    border-left: 6px solid #e74c3c;
+}
+.error .icon-container { background: #e74c3c; box-shadow: 0 0 15px #e74c3c; }
+
+.info {
+    border-left: 6px solid #3498db;
+}
+.info .icon-container { background: #3498db; box-shadow: 0 0 15px #3498db; }
+
+.warning {
+    border-left: 6px solid #f39c12;
+}
+.warning .icon-container { background: #f39c12; box-shadow: 0 0 15px #f39c12; }
+
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(120%); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; transform: translateX(0); }
+    100% { opacity: 0; transform: translateX(120%); }
+}
+
+
+.notification .icon-container span {
+    font-size: 26px; 
+}
