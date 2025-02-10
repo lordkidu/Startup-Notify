@@ -1,6 +1,10 @@
 fx_version 'cerulean'
 game 'gta5'
 
+author 'ludwikgame'
+description 'Notification script'
+version '1.1'
+
 ui_page 'html/index.html'
 
 files {
