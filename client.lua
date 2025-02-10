@@ -9,6 +9,6 @@ AddEventHandler('startup:showNotification', function(message, type, duration)
         message = message,
         type = type,
         duration = duration,
-        position = Config.NotificationPosition -- Envoi de la position
+        position = Config.NotificationPosition 
     })
 end)

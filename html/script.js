@@ -27,7 +27,6 @@ function showNotification(message, type = "info", duration = 5000, position = "t
     notification.appendChild(iconContainer);
     notification.appendChild(textContainer);
 
-    // Créer un conteneur spécifique pour chaque position
     let positionContainer = document.querySelector(`.notifications-container.${position}`);
     if (!positionContainer) {
         positionContainer = document.createElement("div");
